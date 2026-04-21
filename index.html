@@ -144,9 +144,9 @@
     </div>
 
     <div class="btns">
-      <button class="btn-p" onclick="openReport()var newWindow = window.open();
-newWindow.document.write(html);
-newWindow.document.close();>
+      <button class="btn-p" onclick="openReport()var blob = new Blob([html], { type: "text/html" });
+var url = URL.createObjectURL(blob);
+window.location.href = url;>
       <button class="btn-s" onclick="clearAll()">Clear all</button>
     </div>
   </div>
