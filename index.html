@@ -273,7 +273,7 @@ function openReport() {
   '<div class="ftr"><span>Palermo Perfumes Hurstville</span><span>Generated ' + new Date().toLocaleDateString('en-AU',{day:'numeric',month:'long',year:'numeric'}) + '</span></div>' +
   '</div></body></html>';
 
-  var w = window.open('', '_blank');
+  window.location.href = "data:text/html;charset=utf-8," + encodeURIComponent(html);
   if (w) { w.document.write(html); w.document.close(); }
   else { alert('Please allow pop-ups in your browser, then try again.'); }
 }
